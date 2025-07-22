@@ -1,0 +1,22 @@
+repository:
+  name: medapp-backend
+  private: true
+  default_branch: staging
+  has_issues: true
+  has_projects: false
+  has_wiki: false
+
+branches:
+  - name: master
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+      enforce_admins: true
+
+  - name: developer
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+
+  - name: staging
+    protection: null
