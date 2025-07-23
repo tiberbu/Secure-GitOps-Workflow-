@@ -1,7 +1,7 @@
 repository:
   name: medapp-backend
-  private: true
-  default_branch: staging
+  private: false
+  default_branch: developer
   has_issues: true
   has_projects: false
   has_wiki: false
@@ -13,10 +13,10 @@ branches:
         required_approving_review_count: 1
       enforce_admins: true
 
-  - name: developer
+  - name: staging
     protection:
       required_pull_request_reviews:
         required_approving_review_count: 1
 
-  - name: staging
+  - name: developer
     protection: null
