@@ -2,8 +2,7 @@ name: Run Backend Tests
 
 on:
   pull_request:
-    branches: [staging, developer, master]
-
+    branches: [developer, staging , master]
 jobs:
   test:
     runs-on: ubuntu-latest
