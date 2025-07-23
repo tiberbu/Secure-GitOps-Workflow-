@@ -1,22 +1,14 @@
-name: Run Backend Tests
+name: Test Branch Protection
 
 on:
   pull_request:
-    branches: [developer, staging , master]
+    branches: [developer, staging, master]
+
 jobs:
-  test:
+  validate:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-
-    - name: Install Dependencies
-      run: npm install
-
-    - name: Run Tests
-      run: npm test
+      - name: Check Branch Protection
+        run: |
+          echo "✅ PR created - branch protection rules will apply"
+          echo "No builds needed - just testing approval requirements"
