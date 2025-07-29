@@ -1,0 +1,14 @@
+name: Test Branch Protection
+
+on:
+  pull_request:
+    branches: [developer, staging, master]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Branch Protection
+        run: |
+          echo "✅ PR created - branch protection rules will apply"
+          echo "No builds needed - just testing approval requirements"
