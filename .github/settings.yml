@@ -1,0 +1,19 @@
+branches:
+  - name: master
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        require_code_owner_reviews: true  # Enforce CODEOWNERS
+      enforce_admins: false              # No admin bypass
+
+  - name: staging
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        require_code_owner_reviews: true
+      enforce_admins: false
+
+  - name: developer
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1  # Optional: Remove if devs should self-merge
